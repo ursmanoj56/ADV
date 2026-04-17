@@ -8,7 +8,7 @@ from Utilities.ExcelUtilities import get_data_from_excel
 class TestLogin(BaseTest):
     def test_valid_login(self):
         self.loginpage= LoginPage(self.driver)
-        self.loginpage.login("admin@admin.com","admin@123")
+        self.loginpage.login("","")
 
     @pytest.mark.parametrize("username,password",get_data_from_excel("TestFiles/ADVlogin.xlsx", "LoginTest"))
     def test_invalid_login(self,username,password):
